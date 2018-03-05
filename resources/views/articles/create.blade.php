@@ -4,9 +4,13 @@
 
     <form action="" id="createFrm">
     <div class="form-group">
-        <label for="model">Model</label>
+        <label for="alias">Alias</label>
         <input type="text" name="model">
     </div>
+        <div class="form-group">
+            <label for="model">Model</label>
+            <input type="text" name="model">
+        </div>
         <div class="form-group">
             <label for="price">Price</label>
             <input type="text" name="price">

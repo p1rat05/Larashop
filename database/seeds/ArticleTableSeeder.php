@@ -15,6 +15,7 @@ class ArticleTableSeeder extends Seeder
             [
                 'idBrand' => 1,
                 'idArtGroup' => 1,
+                'alias'=> 'mx1102',
                 'model' => 'mx1102',
                 'price' => 200,
                 'chars' => '1;2;156;321;45;',
@@ -26,6 +27,7 @@ Vix eu erat oporteat sententiae, cu qui amet invenire expetenda. Cu idque decore
             [
                 'idBrand' => 1,
                 'idArtGroup' => 2,
+                'alias'=> '2222222',
                 'model' => '2222222',
                 'price' => 20,
                 'chars' => '1;2;156;321;45;',
@@ -37,6 +39,7 @@ Vix eu erat oporteat sententiae, cu qui amet invenire expetenda. Cu idque decore
             [
                 'idBrand' => 1,
                 'idArtGroup' => 3,
+                'alias'=> '333333',
                 'model' => '333333',
                 'price' => 100,
                 'chars' => '1;2;156;321;45;',
@@ -48,6 +51,7 @@ Vix eu erat oporteat sententiae, cu qui amet invenire expetenda. Cu idque decore
             [
                 'idBrand' => 2,
                 'idArtGroup' => 1,
+                'alias'=> '21212121',
                 'model' => '21212121',
                 'price' => 150,
                 'chars' => '1;2;156;321;45;',
@@ -59,6 +63,7 @@ Vix eu erat oporteat sententiae, cu qui amet invenire expetenda. Cu idque decore
             [
                 'idBrand' => 3,
                 'idArtGroup' => 1,
+                'alias' => '313131',
                 'model' => '313131',
                 'price' => 30,
                 'chars' => '1;2;156;321;45;',

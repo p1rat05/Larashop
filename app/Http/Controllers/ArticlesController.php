@@ -19,9 +19,9 @@ class ArticlesController extends Controller
         return view('articles.create');
     }
 
-    public function show($id)
+    public function show(Article $article)
     {
-        $article = Article::find($id);
+//        $article = Article::find($id);
         return view('articles.show', compact('article'));
     }
 }
