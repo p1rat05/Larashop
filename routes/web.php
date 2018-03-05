@@ -15,3 +15,17 @@ Route::get('/', "ArticlesController@index");
 Route::get('/create', "ArticlesController@create");
 Route::get('/{article}', "ArticlesController@show");
 
+Route::post('/', 'ArticleController@create');
+
+/*
+ *
+ * GET /
+ * GET /create
+ * POST /
+ * GET /{id}/edit
+ * PATCH /{id}
+ * GET /{id}
+ * DELETE /{id}
+ *
+ *
+ */
