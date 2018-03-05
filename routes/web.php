@@ -11,14 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    $articles = DB::table('articles')->get();
-    return view('index', compact('articles'));
-});
+Route::get('/', "ArticlesController@index");
+Route::get('/create', "ArticlesController@create");
+Route::get('/{id}', "ArticlesController@show");
 
-Route::get('/{id}', function($id)
-{
-    $article = DB::table('articles')->find($id);
-//    dd($articles);
-    return view('articles.show', compact('article'));
-});
