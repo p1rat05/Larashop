@@ -12,10 +12,9 @@
 */
 
 Route::get('/', "ArticlesController@index");
-Route::get('/create', "ArticlesController@create");
-Route::get('/{article}', "ArticlesController@show");
-
-Route::post('/', 'ArticleController@create');
+Route::get('articles/create', "ArticlesController@create");
+Route::get('articles/{article}', "ArticlesController@show");
+Route::post('articles/', 'ArticleController@store');
 
 /*
  *

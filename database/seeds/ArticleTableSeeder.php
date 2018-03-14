@@ -27,7 +27,7 @@ Vix eu erat oporteat sententiae, cu qui amet invenire expetenda. Cu idque decore
             [
                 'idBrand' => 1,
                 'idArtGroup' => 2,
-                'alias'=> '2222222',
+                'alias'=> 'first_article',
                 'model' => '2222222',
                 'price' => 20,
                 'chars' => '1;2;156;321;45;',

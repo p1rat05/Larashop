@@ -25,7 +25,7 @@
             <div class="col-md-4">
                 {{$article->price}}
             </div>
-                <a href="/{{$article->id}}" class="btn btn-success">Характеристики</a>
+                <a href="articles/{{$article->id}}" class="btn btn-success">Характеристики</a>
                 <a href="#{{$article->id}}" class="btn btn-dark">Купить</a>
         </div>
     @endforeach

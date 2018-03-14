@@ -3,12 +3,13 @@
 @section('content')
 
     <h2>Добавить товар</h2>
-    <form action="/article" method="post">
+    <form action="/articles" method="post">
     <div class="form-group">
         <label for="alias">Alias</label>
         <input class="form-control" type="text" name="model">
     </div>
         <div class="form-group">
+            {{csrf_field()}}
             <label for="model">Model</label>
             <input class="form-control" type="text" name="model">
         </div>

@@ -19,6 +19,20 @@ class ArticlesController extends Controller
         return view('articles.create');
     }
 
+    public function store()
+    {
+        //dd(request()->all);
+        $article = new Article();
+        $article->alias = request('alias');
+        $article->model = request('model');
+        $article->price = request('price');
+        $article->chars = request('chars');
+        $article->desc = request('desc');
+        $article->save();
+        return redirect('/');
+    }
+
+
     public function show(Article $article)
     {
 //        $article = Article::find($id);
