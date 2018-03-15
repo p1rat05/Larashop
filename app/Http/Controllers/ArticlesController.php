@@ -22,13 +22,24 @@ class ArticlesController extends Controller
     public function store()
     {
         //dd(request()->all);
-        $article = new Article();
-        $article->alias = request('alias');
-        $article->model = request('model');
-        $article->price = request('price');
-        $article->chars = request('chars');
-        $article->desc = request('desc');
-        $article->save();
+//        $article = new Article;
+//        $article->alias = request('alias');
+//        $article->model = request('model');
+//        $article->price = request('price');
+//        $article->chars = request('chars');
+//        $article->desc = request('desc');
+//        $article->idBrand=1;
+//        $article->idArtGroup=1;
+//        $article->save();
+        Article::create([
+            'alias' => request('alias'),
+            'model' => request('model'),
+            'price' => request('price'),
+            'chars' => request('chars'),
+            'desc' => request('desc'),
+            'idBrand' => 1,
+            'idArtGroup' => 1
+        ]);
         return redirect('/');
     }
 

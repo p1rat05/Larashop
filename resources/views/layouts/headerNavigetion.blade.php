@@ -9,6 +9,6 @@
         <a class="nav-item nav-link" href="#">Enterprise</a>
         <a class="nav-item nav-link" href="#">Support</a>
         <a class="nav-item nav-link" href="#">Pricing</a>
-        <a class="nav-item nav-link" href="articles/create">Create</a>
+        <a class="nav-item nav-link" href="/articles/create">Create</a>
     </div>
 </nav>

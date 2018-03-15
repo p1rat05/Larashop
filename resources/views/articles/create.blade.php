@@ -6,7 +6,7 @@
     <form action="/articles" method="post">
     <div class="form-group">
         <label for="alias">Alias</label>
-        <input class="form-control" type="text" name="model">
+        <input class="form-control" type="text" name="alias">
     </div>
         <div class="form-group">
             {{csrf_field()}}
