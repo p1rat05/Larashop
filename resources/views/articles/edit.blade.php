@@ -11,7 +11,7 @@
         <div class="form-group">
             {{csrf_field()}}
             <label for="model">Model</label>
-            <input class="form-control" type="text" name="model">
+            <input class="form-control" type="text" name="model" value="{{$post->model}}">
         </div>
         <div class="form-group">
             <label for="price">Price</label>

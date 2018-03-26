@@ -31,6 +31,13 @@ class ArticlesController extends Controller
 //        $article->idBrand=1;
 //        $article->idArtGroup=1;
 //        $article->save();
+        $this->validate(request(), [
+            'alias' => 'required',
+            'model' => 'required',
+            'price' => 'required',
+            'chars' => 'required',
+            'desc' => 'required'
+        ]);
         Article::create([
             'alias' => request('alias'),
             'model' => request('model'),
@@ -48,5 +55,10 @@ class ArticlesController extends Controller
     {
 //        $article = Article::find($id);
         return view('articles.show', compact('article'));
+    }
+
+    public function edit(Article $article)
+    {
+        return view('articles.edit', compact('article'));
     }
 }
