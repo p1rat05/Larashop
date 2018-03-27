@@ -7,7 +7,7 @@
         {{csrf_field()}}
         {!! method_field('patch') !!}
     <div class="form-group">
-        <label for="alias">Alias</label>
+        <label for="alias">Алиас</label>
         <input class="form-control" type="text" name="alias" value="{{$article->alias}}">
     </div>
         <div class="form-group">
