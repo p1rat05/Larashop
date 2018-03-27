@@ -61,4 +61,25 @@ class ArticlesController extends Controller
     {
         return view('articles.edit', compact('article'));
     }
+
+    public function destroy(Article $article)
+    {
+        $article->delete();
+        return redirect('/');
+    }
+
+
+    public function update(Article $article)
+    {
+        $this->validate(request(), [
+            'alias' => 'required',
+            'model' => 'required',
+            'price' => 'required',
+            'chars' => 'required',
+            'desc' => 'required'
+        ]);
+        $article->update(request(['alias', 'model', 'price', 'chars', 'desc']));
+
+        return redirect('/');
+    }
 }

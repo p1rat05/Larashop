@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
             <label for="desc">Description</label>
-            <input class="form-control" type="text" name="desc">
+            <textarea class="form-control" type="text" rows="10" name="desc"></textarea>
         </div>
         <div class="form-group">
             <input type="reset" class="btn btn-danger" id="resetBtn">
