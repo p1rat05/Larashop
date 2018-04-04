@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/php', "ArticlesController@index");
+Route::get('/', "ArticlesController@index");
 Route::get('/articles/create', "ArticlesController@create");
-Route::get('/articles/{article}', "ArticlesController@show");
+Route::get('/articles/{article}', "ArticlesController@show"); //->middleware('mymiddle');
 Route::post('/articles/', 'ArticlesController@store');
 Route::get('/articles/{article}/edit', 'ArticlesController@edit');
 Route::patch('/articles/{article}', "ArticlesController@update");
