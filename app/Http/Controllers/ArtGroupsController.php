@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\ArtGroup;
 use Illuminate\Http\Request;
 
-class ArticlesGroupsController extends Controller
+class ArtGroupsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class ArticlesGroupsController extends Controller
      */
     public function index()
     {
-        //
+        $artGroups = ArtGroup::All();
+        return view('artgroups.index', compact('artGroups'));
     }
 
     /**
@@ -23,7 +25,7 @@ class ArticlesGroupsController extends Controller
      */
     public function create()
     {
-        //
+        return view('artgroups.create');
     }
 
     /**
@@ -34,16 +36,24 @@ class ArticlesGroupsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate(request(), [
+                'name' => 'required'
+            ]);
+
+        $artGroup = new ArtGroup();
+        $artGroup->name = request('name');
+        $artGroup->save();
+
+        return redirect()->action('ArtGroup@index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\ArtGroup  $articleGroup
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(ArtGroup $articleGroup)
     {
         //
     }
@@ -51,10 +61,10 @@ class ArticlesGroupsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\ArtGroup  $articleGroup
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(ArtGroup $articleGroup)
     {
         //
     }
@@ -63,10 +73,10 @@ class ArticlesGroupsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\ArtGroup  $articleGroup
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, ArtGroup $articleGroup)
     {
         //
     }
@@ -74,10 +84,10 @@ class ArticlesGroupsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\ArtGroup  $articleGroup
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(ArtGroup $articleGroup)
     {
         //
     }
