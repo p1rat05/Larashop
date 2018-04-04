@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <h2>Добавить Группу товаров</h2>
-    <form action="/ag" method="post">
+    <h2>Добавить группу товаров</h2>
+    <form action="/ArtGroups" method="post">
         <div class="form-group">
             <label for="name">Name</label>
             <input class="form-control" type="text" name="name">

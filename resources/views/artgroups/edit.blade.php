@@ -2,20 +2,19 @@
 
 @section('content')
 
-    <h2>Добавить Группу товаров</h2>
-    <form method="">
-
-    </form>
-    <div class="col-md-4">
-        Наименование
-    </div>
-        <div class="row">
-            <div class="col-md-4">
-                {{$artGroup->name}}
-            </div>
-            <a href="AG/{{$artGroup->id}}/edit" class="btn btn-info btn-sm">Редактировать</a>
+    <h2>Редактировать группу товаров</h2>
+    <form action="/ArtGroups/{{$artGroup->id}}" method="post">
+        {!! method_field('patch') !!}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" name="name" value="{{$artGroup->name}}">
+            {{csrf_field()}}
         </div>
-    <div class="container">
-        <a href="AG/create" class="btn btn-success">Добавить</a>
-    </div>
+        <div class="form-group">
+            <input type="reset" class="btn btn-danger" id="resetBtn">
+            <input type="submit" class="btn btn-primary" value="Добавить">
+        </div>
+        @include('layouts.errors')
+    </form>
+
 @endsection

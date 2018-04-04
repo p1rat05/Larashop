@@ -44,7 +44,7 @@ class ArtGroupsController extends Controller
         $artGroup->name = request('name');
         $artGroup->save();
 
-        return redirect()->action('ArtGroup@index');
+        return redirect()->action('ArtGroupsController@index');
     }
 
     /**
@@ -66,7 +66,7 @@ class ArtGroupsController extends Controller
      */
     public function edit(ArtGroup $articleGroup)
     {
-        //
+        return view('artgroups.edit', compact(\request(), ['artGroup']));
     }
 
     /**
@@ -78,7 +78,11 @@ class ArtGroupsController extends Controller
      */
     public function update(Request $request, ArtGroup $articleGroup)
     {
-        //
+        $this->validate(request(), [
+            'name' => 'required'
+        ]);
+
+        $articleGroup->update(request(['name']));
     }
 
     /**
@@ -87,8 +91,9 @@ class ArtGroupsController extends Controller
      * @param  \App\ArtGroup  $articleGroup
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ArtGroup $articleGroup)
+    public function destroy(ArtGroup $artGroup)
     {
-        //
+        $artGroup->delete();
+        return redirect()->action('ArtGroupsController@index');
     }
 }
