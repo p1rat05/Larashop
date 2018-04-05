@@ -13,13 +13,16 @@ class ArticleGroupsTableSeeder extends Seeder
     {
         DB::table('artGroups')->insert(array(
             [
-                'name'=>'Бытовая техника'
+                'name'=>'Бытовая техника',
+                'alias' => 'bytovaya_tehnica'
             ],
             [
-                'name'=>'Смартфоны'
+                'name'=>'Смартфоны',
+                'alias' => 'smartfony'
             ],
             [
-                'name'=>'Аудио-видео'
+                'name'=>'Аудио-видео',
+                'alias' => 'audio_video'
             ]
         ));
     }

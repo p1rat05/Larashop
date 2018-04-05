@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
             <input type="reset" class="btn btn-danger" id="resetBtn">
-            <input type="submit" class="btn btn-primary" value="Добавить">
+            <input type="submit" class="btn btn-primary" value="Обновить">
         </div>
         @include('layouts.errors')
     </form>
