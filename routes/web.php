@@ -42,3 +42,6 @@ Route::delete('/ArtGroups/{artGroup}', "ArtGroupsController@destroy");
  *
  *
  */
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
