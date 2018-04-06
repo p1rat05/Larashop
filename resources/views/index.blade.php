@@ -25,12 +25,12 @@
             <div class="col-md-4">
                 {{$article->price}}
             </div>
-                <a href="articles/{{$article->alias}}" class="btn btn-success">Характеристики</a>
-                <a href="articles/{{$article->alias}}/edit" class="btn btn-info">Редактировать</a>
+                <a href="articles/{{$article->alias}}" class="btn btn-sm btn-success">Характеристики</a>
+                <a href="articles/{{$article->alias}}/edit" class="btn btn-sm btn-info">Редактировать</a>
             <form action="articles/{{$article->alias}}" method="post">
                 {{csrf_field()}}
                 {!! method_field('delete') !!}
-                <button type="submit" class="btn btn-danger">Удалить</button>
+                <button type="submit" class="btn btn-sm btn-danger">Удалить</button>
             </form>
         </div>
     @endforeach
