@@ -1,3 +1,4 @@
+@include('layouts.loginpart')
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,6 +17,9 @@
 
 <div class="jumbotron">
     <div class="container">
+        <div class="container">
+            @yield('loginpart')
+        </div>
         <h1>Hello world</h1>
         <p>Новый продукт</p>
     </div>
